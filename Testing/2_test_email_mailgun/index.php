@@ -1,7 +1,7 @@
 <?php
     //https://github.com/mailgun/mailgun-php
     //Authorized Recipients -> afegir a 'yomogan@gmail.com'
-    
+    //
     function send_mailgun($email){
 		$ini_key=parse_ini_file($_SERVER['DOCUMENT_ROOT'] . '/Wines_PHP_FRAMEWORK_OO_MVC/Testing/API_KEY/api_key.ini');		
 		$config = array();
