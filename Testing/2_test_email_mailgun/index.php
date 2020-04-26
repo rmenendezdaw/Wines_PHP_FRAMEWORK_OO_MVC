@@ -29,7 +29,7 @@
     	$result = curl_exec($ch);
     	curl_close($ch);
     	return $result;
-    }
-    
+	}
+	
     $json = send_mailgun('rmenendeziestacio@gmail.com');
     print_r($json);

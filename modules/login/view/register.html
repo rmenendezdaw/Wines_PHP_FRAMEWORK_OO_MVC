@@ -1,0 +1,47 @@
+<div id="content">
+    <div id="formLog">
+        <form method="POST" class="regForm" id="regForm">
+            <table>
+                <tr>
+                <h3 data-tr="Register"></h3>
+                </tr>
+                <br>
+                <tr>
+                    <p>Username: </p>
+                </tr>
+                <tr>
+                    <input type="text" id="username" placeholder="Username" size="15">
+                    <br><span id="e_username" class="styerror"></span>
+                </tr>
+                <br>
+                <tr>
+                    <p>Email: </p>
+                </tr>
+                <tr>
+                    <input type="text" id="email" placeholder="example@gmail.com" size="15">
+                    <br><span id="e_email" class="styerror"></span>
+                </tr>
+                <br>
+                <tr>
+                    <p>Password: </p>
+                </tr>
+                <tr>
+                    <input type="password" id="password" placeholder="Password" size="20">
+                    <br><span id="e_password" class="styerror"></span>
+                </tr>
+                <br>
+                <tr>
+                    <p>Retype Password: </p>
+                </tr>
+                <tr>
+                    <input type="password" id="repassword" placeholder="Password" size="20">
+                    <br><span id="e_repassword" class="styerror"></span>
+                </tr>
+                <tr>
+                    <input name="sendReg" type="submit" id="sendReg" value="Send" onclick="validate_register()"/>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+</div>

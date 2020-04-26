@@ -1,0 +1,234 @@
+/*!
+ * Start Bootstrap - Full Width Pics (https://startbootstrap.com/template-overviews/full-width-pics)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-full-width-pics/blob/master/LICENSE)
+ */
+body {
+  padding-top: 56px;
+}
+
+.bg-image-full {
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: 100%;
+  -o-background-size: cover;
+}
+.table_create { /* CREAAAAA*/
+  text-align: center;
+  color: aliceblue;
+  text-emphasis: bold;
+  align-items: center;
+  background-color: darkred;
+  margin: 2%;
+}
+.myh1{
+  font-size: 30px;
+  padding: 5px;
+  color: aliceblue;
+  text-align: center;
+  background-color:darkred;
+}
+.card_cat{
+  height: 0px;
+  /* margin: 2%; */
+  font-size: 25px;
+  text-decoration: none;
+  padding: 30%;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  /* background-color:darkred; */
+}
+.card_cat:hover{
+  color: darkblue;
+  text-decoration: none;
+}
+
+
+
+.img-text {
+  text-align: center;
+  font-size: 100px; 
+  padding-top: 300px;;
+}
+
+/* CRUD table */
+#crudtable thead {
+	background-color: darkred;
+	color: #FFFFFF;
+}
+#crudtable tbody {
+	background-color: #FFFFFF;
+	border: 1px;
+}
+#crudtable tbody tr:hover{
+	background-color: burlywood;
+}
+/* end crudtable */
+
+.catdiv {
+  background-color: rgb(148, 50, 50);
+   height: 270px;
+  width: 100px;
+  background: no-repeat;
+  background-position: center;
+  background-size: 250px;
+  padding: 0 100px; 
+  transition: all 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+}
+.catdiv:hover {
+background-color: rgb(148, 50, 50);
+transition: all 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+}
+.catdiv:hover p {
+  transition: all 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+  color: #FFFFFF;
+  }
+
+#main_contents{
+  padding: 2%;
+  display: flex; 
+  flex-wrap: wrap;
+  background-color: rgb(255, 255, 255);
+}
+.intdiv {
+  height: 30px;
+  font-size: 30px;
+  text-align: center;
+  /* padding: 50%; */
+  color: black;
+}
+
+#prods{
+    padding: 2%;
+    display: flex; 
+    flex-wrap: wrap;
+    background-color: rgb(37, 37, 37);
+}
+.prodcard {
+  font-size: 30px;
+  text-align: center;
+  padding: 20%;
+  background-color: #FFFFFF;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.prodcard:hover {
+  text-align: center;
+  padding-top: 23%;
+  font-size: 40px;
+  color: white;
+  background-color: darkred;
+}
+
+#detail_prod{
+  background-color: brown;
+  color: #FFFFFF;
+  font-size: 30px;
+}
+.title_type {
+  background-color: rgb(37, 37, 37);
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  padding-top: 5px;
+  height: 40px;
+}
+.title_type hr{
+  background-color: #FFFFFF;
+  height: 3px;
+}
+/* DETAILS */
+.img_details {
+   width: 2000px;
+  height: 2000px;
+  overflow: hidden;
+  margin: 5px;
+}
+#content{
+  background-color: rgb(37, 37, 37);
+}
+#detail{
+  color: white;
+}
+.styerror{
+  color: red;
+}
+.imgerror{
+  align-items: center;
+  height: 400px;
+  width: 750px;
+}
+
+.form_filters{
+  color:white;
+  /* float: left; */
+  width: 200px;
+  padding-left: 10px;
+    background-color: rgb(53, 2, 5);
+
+}
+#modal_map{
+  margin: 4px;
+  float: right;
+  height: 200px;
+  width: 200px;
+}
+
+#searchList {
+  background-color: #FFFFFF;
+  color: black;
+  size: 30px;
+}
+#searchList:hover {
+  background-color: darkred;
+  color: white;
+}
+#related{
+  padding: 2%;
+    display: flex; 
+    flex-wrap: wrap;
+    background-color: rgb(37, 37, 37);
+    margin: 5px;
+}
+#relateDiv{
+    background-color: #FFFFFF;
+    margin: 1px;
+}
+#relateDiv:hover {
+  background-color: darkred;
+  color: white;
+}
+
+#formLog {
+  background-color: darkred;
+  padding-left: 50px;
+  padding-right: 400px;
+  padding-bottom: 50px;
+
+  margin-left: 200px;
+  margin-right: 250px;
+
+  align-items: center;
+  display: flex;
+  color: #FFFFFF;
+}
+
+
+.btn-fav{
+  height: 50px;
+  width: 50px;
+  margin-left: 75px;
+}
+
+.btn-fav path:hover{
+  color: yellow;
+  }
+.btn-fav-active path{
+  color: yellow;
+  }
+/* .btn-fav path:hover {
+  stroke: yellow;
+  fill: white;
+} */

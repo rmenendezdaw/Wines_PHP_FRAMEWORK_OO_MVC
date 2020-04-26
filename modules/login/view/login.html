@@ -1,0 +1,36 @@
+<div id="content">
+    <div id="formLog">
+        <form method="POST" class="logForm" id="logForm">
+            <table>
+                <tr>
+                <h3 data-tr="Log in"></h3>
+                </tr>
+                <br>
+                <tr>
+                    <p>Username: </p>
+                </tr>
+                <tr>
+                    <input type="text" id="username" placeholder="Username" size="15">
+                    <br><span id="e_username" class="styerror"></span>
+                </tr>
+                <br>
+                <tr>
+                    <p>Password: </p>
+                </tr>
+                <tr>
+                    <input type="password" id="password" placeholder="Password" size="20">
+                    <br><span id="e_password" class="styerror"></span>
+                </tr>
+                <br>
+                <tr>
+                    <input name="sendLog" type="submit" value="Send" onclick="validate_login()"/>
+                </tr>
+
+                <tr> 
+                    <p>If you have not an account <a href="index.php?page=controller_login&op=register" data-tr="Register"></a></p>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+</div>
