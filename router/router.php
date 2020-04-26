@@ -2,6 +2,7 @@
 require_once("paths.php");
 
 include(UTILS . "common.inc.php");
+include(UTILS . "mail.inc.php");
 
 session_start();
 $_SESSION['module'] = "";

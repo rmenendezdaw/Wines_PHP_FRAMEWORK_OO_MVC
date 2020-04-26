@@ -8,9 +8,9 @@ function loadView($pathVi = '', $templateName = '', $arrPassValue = '') {
             $arrData = $arrPassValue;
         include_once($pathView);
     } else {
-        /*$result = response_code($rutaVista);
-        $arrData = $result;
-        require_once VIEW_PATH_INC_ERROR . "error.php";*/
-        //die();
+        // $result = response_code($pathVi);
+        // $arrData = $result;
+        // require_once VIEW_PATH_INC_ERROR . "error.php";
+        // die();
     }
 }

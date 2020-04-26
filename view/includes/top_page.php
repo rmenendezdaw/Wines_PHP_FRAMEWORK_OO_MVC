@@ -22,6 +22,8 @@
   <!-- <script src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initMap"></script> -->
 
   <script src="view/includes/api_keys/api_key.js"></script>
+  <script src="view/js/api_keys/api_key.ini"></script>
+
 
    <!-- Bootstrap core JavaScript -->
 	<script src="view/assets/vendor/jquery/jquery.min.js"></script>
@@ -31,14 +33,14 @@
   <link href="view/assets/css/full-width-pics.css" rel="stylesheet">
 
     <!-- Load js -->
-  <script src="module/shop/model/controller_shop.js"></script>
+
+  <!-- <script src="module/shop/model/controller_shop.js"></script>
   <script src="module/home/model/controller_home.js"></script>
-  <script src="module/contact/model/controller_contact.js"></script>
+  <script src="module/contact/model/controller_contact.js"></script> -->
   <script src="view/assets/js/jqueryTranslator.js"></script>
-  <script src="module/search/model/search.js"></script>
+  <!-- <script src="module/search/model/search.js"></script>
   <script src="module/login/model/activity.js"></script>
-  <script src="module/cart/model/controller_cart.js"></script>
-  <script src="view/js/api_keys/api_key.js"></script>
+  <script src="module/cart/model/controller_cart.js"></script> -->
 	<script type="text/javascript" src="lang/translate.js"></script>
 </head>
 

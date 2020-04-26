@@ -21,7 +21,7 @@
 		<link href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" rel="stylesheet">
 		<script src="view/includes/api_keys/api_key.js"></script>
 
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAo2yml1SJDD0fxGJxA3NJDin0486fTkRY"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key="></script>
 
 		<script type="text/javascript" src="module/wines/view/controller_ls.js"></script>
 		<script src="module/search/model/search.js"></script>

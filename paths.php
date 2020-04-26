@@ -14,6 +14,8 @@ define('CSS_PATH', SITE_PATH . 'view/assets/vendor/');
 define('IMG_PATH', SITE_PATH . 'view/img/');
 //JS
 define('JS_PATH', SITE_PATH . 'view/js/');
+define('INI_PATH_API', SITE_ROOT . 'view/js/api_keys/');
+
 //UTILS
 define('UTILS', SITE_ROOT . 'utils/');
 //MODULES
@@ -22,6 +24,5 @@ define('MODULES_PATH', SITE_ROOT . 'modules/');
 define('VIEW_PATH_INC', SITE_ROOT . 'view/includes/');
 
 
-//MODEL CONTACT
-
+//MODULE CONTACT
 define('JS_VIEW_CONTACT', SITE_PATH . 'modules/contact/view/js/');
