@@ -1,4 +1,7 @@
 <?php
+require_once("paths.php");
+
+include(UTILS . "common.inc.php");
 
 session_start();
 $_SESSION['module'] = "";
@@ -26,31 +29,31 @@ function handlerModule($URI_MODULE, $URI_FUNCTION) {
 
         if (($URI_MODULE === (String) $module->uri)) {
             $exist = true;
-            $path = 'modules/' . $URI_MODULE . '/controller/controller_' 
+            $path = MODULES_PATH . $URI_MODULE . '/controller/controller_' 
             . $URI_MODULE . '.class.php';
             if (file_exists($path)) {
                 require_once($path);
                 $controllerClass = "controller_" . $URI_MODULE;
                 $obj = new $controllerClass;
             } else {
-                require_once("view/includes/header.html");
-                require_once("view/includes/menu/menu.php");
-                require_once("view/includes/404.html");
-                require_once("view/includes/footer.html");
+                require_once(VIEW_PATH_INC . "header.html");
+                require_once(VIEW_PATH_INC . "menu/menu.php");
+                require_once(VIEW_PATH_INC . "404.html");
+                require_once(VIEW_PATH_INC . "footer.html");
             }
             handlerFunction(((String) $module->name), $obj, $URI_FUNCTION);
             break;
         }
     }
     if (!$exist) {
-        require_once("view/includes/header.html");
-        require_once("view/includes/menu/menu.php");
-        require_once("view/includes/404.html");
-        require_once("view/includes/footer.html");
+        require_once(VIEW_PATH_INC . "header.html");
+        require_once(VIEW_PATH_INC . "menu/menu.php");
+        require_once(VIEW_PATH_INC . "404.html");
+        require_once(VIEW_PATH_INC . "footer.html");
     }
 }
 function handlerFunction($module, $obj, $URI_FUNCTION) {
-    $functions = simplexml_load_file("modules/" . $module . "/resources/function.xml");
+    $functions = simplexml_load_file(MODULES_PATH . $module . "/resources/function.xml");
     $exist = false;
 
     foreach ($functions->function as $function) {
@@ -61,10 +64,10 @@ function handlerFunction($module, $obj, $URI_FUNCTION) {
         }
     }
     if (!$exist) {
-        require_once("view/includes/header.html");
-        require_once("view/includes/menu/menu.php");
-        require_once("view/includes/404.html");
-        require_once("view/includes/footer.html");
+        require_once(VIEW_PATH_INC . "header.html");
+        require_once(VIEW_PATH_INC . "menu/menu.php");
+        require_once(VIEW_PATH_INC . "404.html");
+        require_once(VIEW_PATH_INC . "footer.html");
     } else {
         call_user_func(array($obj, $event));
     }
