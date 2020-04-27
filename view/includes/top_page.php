@@ -23,18 +23,25 @@
 
 
    <!-- Bootstrap core JavaScript -->
-	<script src="view/assets/vendor/jquery/jquery.min.js"></script>
-	<script src="view/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<link href="view/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<script src="<?php echo VENDOR_PATH ?>jquery/jquery.min.js"></script>
+	<script src="<?php echo VENDOR_PATH ?>bootstrap/js/bootstrap.bundle.min.js"></script>
+  <link href="<?php echo VENDOR_PATH ?>bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- TOASTR -->
 	 <link href="view/toastr/plugins/toastr/toastr.min.css" rel="stylesheet">
-  <!-- <script src="view/toastr/plugins/toastr/toastr.min.js"></script> -->
-  <!-- <link href="view/toastr/bootstrap4/css/bootstrap.min.css" rel="stylesheet"> -->
+	<link href="<?php echo CSS_PATH ?>full-width-pics.css" rel="stylesheet" type="text/css">
 
-
-  <link href="view/assets/css/full-width-pics.css" rel="stylesheet">
+	<script type="text/javascript"  src="<?php echo LANG_PATH ?>translate.js"></script>
+  <script type="text/javascript" src="<?php echo JS_PATH ?>main.js"></script> 
+  <script type="text/javascript" src="<?php echo JS_PATH ?>api_keys/api_key.js"></script> 
+	<script type="text/javascript" src="<?php echo INI_PATH_API ?>api_key.ini"></script>
+  
+  <!-- <link href="view/assets/css/full-width-pics.css" rel="stylesheet"> -->
 
     <!-- Load js -->
-
+    <script type="text/javascript" src="<?php echo JS_VIEW_CONTACT ?>contact_list.js"></script>
+  <script type="text/javascript" src="<?php echo PATH_TOASTR ?>toastr.js"></script> 
+  <link href="<?php echo CSS_TOASTR ?>toastr.css" rel="stylesheet"/> 
   <!-- <script src="module/shop/model/controller_shop.js"></script>
   <script src="module/home/model/controller_home.js"></script>
   <script src="module/contact/model/controller_contact.js"></script> -->
@@ -42,7 +49,8 @@
   <!-- <script src="module/search/model/search.js"></script>
   <script src="module/login/model/activity.js"></script>
   <script src="module/cart/model/controller_cart.js"></script> -->
-	<script type="text/javascript" src="lang/translate.js"></script>
+
+	<!-- <script type="text/javascript" src="lang/translate.js"></script> -->
 </head>
 
 
@@ -56,6 +64,3 @@
 	<!-- <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.js"></script> -->
-	
-
-<body>

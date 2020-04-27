@@ -9,21 +9,21 @@
         <ul class="navbar-nav ml-auto">
           
           <li class="nav-item active">
-            <a class="nav-link" href="index.php?page=controller_home&op=list" data-tr="Home">
+            <a class="nav-link" href="<?php amigable('?module=home&function=list_home'); ?>" data-tr="Home">
               <span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.php?page=controller_shop&op=list" data-tr="Shop"></a>
+            <a class="nav-link" href="<?php amigable('?module=shop&function=list_shop'); ?>" data-tr="Shop"></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.php?page=controller_login&op=login" data-tr="Log in"></a>
+            <a class="nav-link" href="<?php amigable('?module=login&function=list_login'); ?>" data-tr="Log in"></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.php?page=controller_cart&op=list" data-tr="Cart"></a>
+            <a class="nav-link" href="<?php amigable('?module=cart&function=list_cart'); ?>" data-tr="Cart"></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="?module=contact&function=list_contact" >Contact</a>
+            <a class="nav-link" href="<?php amigable('?module=contact&function=list_contact'); ?>" >Contact</a>
           </li>
         </ul>
       </div>

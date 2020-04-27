@@ -10,7 +10,7 @@ function loadView($pathVi = '', $templateName = '', $arrPassValue = '') {
     } else {
         // $result = response_code($pathVi);
         // $arrData = $result;
-        // require_once VIEW_PATH_INC_ERROR . "error.php";
+        require_once(VIEW_PATH_INC . "404.html");
         // die();
     }
 }

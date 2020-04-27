@@ -1,6 +1,7 @@
 <?php
 require_once("paths.php");
 
+include(UTILS . "utils.inc.php");
 include(UTILS . "common.inc.php");
 include(UTILS . "mail.inc.php");
 
@@ -18,7 +19,7 @@ function handlerRouter() {
     } else {
         $URI_FUNCTION = 'list_home';
     }
-        handlerModule($URI_MODULE, $URI_FUNCTION);
+    handlerModule($URI_MODULE, $URI_FUNCTION);
 }
 
 function handlerModule($URI_MODULE, $URI_FUNCTION) {
@@ -37,6 +38,7 @@ function handlerModule($URI_MODULE, $URI_FUNCTION) {
                 $controllerClass = "controller_" . $URI_MODULE;
                 $obj = new $controllerClass;
             } else {
+                require_once(VIEW_PATH_INC . "top_page.php");
                 require_once(VIEW_PATH_INC . "header.html");
                 require_once(VIEW_PATH_INC . "menu/menu.php");
                 require_once(VIEW_PATH_INC . "404.html");
@@ -47,6 +49,7 @@ function handlerModule($URI_MODULE, $URI_FUNCTION) {
         }
     }
     if (!$exist) {
+        require_once(VIEW_PATH_INC . "top_page.php");
         require_once(VIEW_PATH_INC . "header.html");
         require_once(VIEW_PATH_INC . "menu/menu.php");
         require_once(VIEW_PATH_INC . "404.html");
@@ -65,6 +68,7 @@ function handlerFunction($module, $obj, $URI_FUNCTION) {
         }
     }
     if (!$exist) {
+        require_once(VIEW_PATH_INC . "top_page.php");
         require_once(VIEW_PATH_INC . "header.html");
         require_once(VIEW_PATH_INC . "menu/menu.php");
         require_once(VIEW_PATH_INC . "404.html");

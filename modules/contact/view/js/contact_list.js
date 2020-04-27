@@ -74,7 +74,7 @@ function ajaxContact(result) {
         var data = {"cname":$("#cname").val(),"cemail":$("#cemail").val(),"matter":$("#matter").val(),"message":$("#message").val()};
         $.ajax({
             type: "POST",
-            url: "http://localhost/Wines_PHP_FRAMEWORK_OO_MVC/index.php?module=contact&function=send_contact",
+            url: amigable("?module=contact&function=send_contact"),
             dataType: 'JSON',
             data: data
         })

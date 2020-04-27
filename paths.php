@@ -8,8 +8,10 @@ define('SITE_PATH', 'http://' . $_SERVER['HTTP_HOST'] . MAIN_FOLDER);
 
 //CSS
 define('CSS_PATH', SITE_PATH . 'view/assets/css/');
+//LANG
+define('LANG_PATH', SITE_PATH . 'lang/');
 //VENDOR
-define('CSS_PATH', SITE_PATH . 'view/assets/vendor/');
+define('VENDOR_PATH', SITE_PATH . 'view/assets/vendor/');
 //IMG
 define('IMG_PATH', SITE_PATH . 'view/img/');
 //TOASTR
@@ -30,3 +32,6 @@ define('VIEW_PATH_INC', SITE_ROOT . 'view/includes/');
 
 //MODULE CONTACT
 define('JS_VIEW_CONTACT', SITE_PATH . 'modules/contact/view/js/');
+
+//AMIGABLES
+define('URL_AMIGABLES', TRUE);
