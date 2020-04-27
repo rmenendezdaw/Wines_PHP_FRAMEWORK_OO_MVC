@@ -79,7 +79,12 @@ function ajaxContact(result) {
             data: data
         })
         .done(function(data){
-            console.log(data);
+            if (data == "success"){
+                toastr.success("Successfull send");
+                setInterval(location.reload(), 50000);
+            }else{
+                toastr.warning("Error");
+            }
         })
         .fail(function(error){
             console.log(error);

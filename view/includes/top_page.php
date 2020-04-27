@@ -21,14 +21,15 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <!-- <script src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initMap"></script> -->
 
-  <script src="view/includes/api_keys/api_key.js"></script>
-  <script src="view/js/api_keys/api_key.ini"></script>
-
 
    <!-- Bootstrap core JavaScript -->
 	<script src="view/assets/vendor/jquery/jquery.min.js"></script>
 	<script src="view/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 	<link href="view/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	 <link href="view/toastr/plugins/toastr/toastr.min.css" rel="stylesheet">
+  <!-- <script src="view/toastr/plugins/toastr/toastr.min.js"></script> -->
+  <!-- <link href="view/toastr/bootstrap4/css/bootstrap.min.css" rel="stylesheet"> -->
+
 
   <link href="view/assets/css/full-width-pics.css" rel="stylesheet">
 

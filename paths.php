@@ -12,6 +12,10 @@ define('CSS_PATH', SITE_PATH . 'view/assets/css/');
 define('CSS_PATH', SITE_PATH . 'view/assets/vendor/');
 //IMG
 define('IMG_PATH', SITE_PATH . 'view/img/');
+//TOASTR
+define('CSS_TOASTR', SITE_PATH . 'view/toastr/build/');
+define('PATH_TOASTR', SITE_PATH . 'view/toastr/');
+
 //JS
 define('JS_PATH', SITE_PATH . 'view/js/');
 define('INI_PATH_API', SITE_ROOT . 'view/js/api_keys/');

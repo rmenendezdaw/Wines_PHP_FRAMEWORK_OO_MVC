@@ -29,9 +29,9 @@ class controller_contact {
         // print_r($arrArgument);
         try{
             send_email($arrArgument);
-            echo "success";
+            echo json_encode("success");
         } catch (Exception $e) { 
-            echo "Error";
+            echo json_encode("error");
             echo "<div class='alert alert-error'>Server error. Try later...</div>";
         }
     }
