@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <functions>
     <function>
-        <name>list_contact</name>
-        <uri>list_contact</uri>
+        <name>contact_list</name>
+        <uri>contact_list</uri>
     </function>
     <function>
         <name>send_contact</name>

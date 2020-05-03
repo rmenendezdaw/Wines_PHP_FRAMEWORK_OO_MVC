@@ -21,7 +21,7 @@
                 
             case 'contact':
                 $subject = 'Tu Petici&oacute;n a Wines RM ha sido enviada<br>';
-                $ruta = '<a href=http://localhost/Wines_FRAMEWORK_OO_MVC/>aqu&iacute;</a>';
+                $ruta = '<a href=http://localhost/Wines_PHP_FRAMEWORK_OO_MVC/>aqu&iacute;</a>';
                 $body = 'Para visitar nuestra web, pulsa ' . $ruta;
                 break;
     

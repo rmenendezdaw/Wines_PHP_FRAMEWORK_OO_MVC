@@ -2,11 +2,11 @@
 
 class controller_contact {
 
-    // function construct() {
-    //     $_SESSION['module'] = "contact";
-    // }
+    function construct() {
+        $_SESSION['module'] = "contact";
+    }
     
-    function list_contact() {
+    function contact_list() {
         require(VIEW_PATH_INC . "top_page.php");
         require(VIEW_PATH_INC . "header.html");
         require(VIEW_PATH_INC . "menu/menu.php");

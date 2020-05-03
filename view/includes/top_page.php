@@ -16,10 +16,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.js"></script>
   <!-- Bootstrap core CSS -->
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initMap"></script> -->
 
 
    <!-- Bootstrap core JavaScript -->
@@ -40,12 +39,12 @@
 
     <!-- Load js -->
     <script type="text/javascript" src="<?php echo JS_VIEW_CONTACT ?>contact_list.js"></script>
+    <script type="text/javascript" src="<?php echo JS_VIEW_HOME ?>home_list.js"></script>
+    <script type="text/javascript" src="<?php echo IMG_PATH ?>404.html"></script>
+
   <script type="text/javascript" src="<?php echo PATH_TOASTR ?>toastr.js"></script> 
   <link href="<?php echo CSS_TOASTR ?>toastr.css" rel="stylesheet"/> 
-  <!-- <script src="module/shop/model/controller_shop.js"></script>
-  <script src="module/home/model/controller_home.js"></script>
-  <script src="module/contact/model/controller_contact.js"></script> -->
-  <script src="view/assets/js/jqueryTranslator.js"></script>
+  <!-- <script src="view/assets/js/jqueryTranslator.js"></script> -->
   <!-- <script src="module/search/model/search.js"></script>
   <script src="module/login/model/activity.js"></script>
   <script src="module/cart/model/controller_cart.js"></script> -->

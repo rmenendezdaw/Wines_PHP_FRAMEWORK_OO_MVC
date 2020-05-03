@@ -52,7 +52,7 @@ function handlerModule($URI_MODULE, $URI_FUNCTION) {
         require_once(VIEW_PATH_INC . "top_page.php");
         require_once(VIEW_PATH_INC . "header.html");
         require_once(VIEW_PATH_INC . "menu/menu.php");
-        require_once(VIEW_PATH_INC . "404.html");
+        require_once(VIEW_PATH_INC . "404.php");
         require_once(VIEW_PATH_INC . "footer.html");
     }
 }
@@ -71,7 +71,7 @@ function handlerFunction($module, $obj, $URI_FUNCTION) {
         require_once(VIEW_PATH_INC . "top_page.php");
         require_once(VIEW_PATH_INC . "header.html");
         require_once(VIEW_PATH_INC . "menu/menu.php");
-        require_once(VIEW_PATH_INC . "404.html");
+        require_once(VIEW_PATH_INC . "404.php");
         require_once(VIEW_PATH_INC . "footer.html");
     } else {
         call_user_func(array($obj, $event));

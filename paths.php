@@ -32,6 +32,8 @@ define('VIEW_PATH_INC', SITE_ROOT . 'view/includes/');
 
 //MODULE CONTACT
 define('JS_VIEW_CONTACT', SITE_PATH . 'modules/contact/view/js/');
+//MODULE CONTACT
+define('JS_VIEW_HOME', SITE_PATH . 'modules/home/view/js/');
 
 //AMIGABLES
 define('URL_AMIGABLES', TRUE);
