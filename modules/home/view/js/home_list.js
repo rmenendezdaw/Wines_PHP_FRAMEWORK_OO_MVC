@@ -144,9 +144,9 @@ $.ajax({
 $(document).ready(function(){
 
     console.log("In JS");
-// add_visited();
-// carousel();
-// Type_cat(0);
-// scroll_cat();
-// moreRelated();
+add_visited();
+carousel();
+Type_cat(0);
+scroll_cat();
+moreRelated();
 });
