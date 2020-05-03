@@ -7,7 +7,7 @@
         static $instance;
 
        private function __construct() {
-            $cnfg = parse_ini_file(MODEL_PATH."db.ini");
+            $cnfg = parse_ini_file(MODEL_PATH ."db.ini");
             $this->userdb = $cnfg['user'];
             $this->passdb = $cnfg['password'];
             $this->hostdb = $cnfg['host'];

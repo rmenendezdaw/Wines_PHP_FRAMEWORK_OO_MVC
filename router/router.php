@@ -1,5 +1,6 @@
 <?php
 require_once("paths.php");
+require 'autoload.php';
 
 include(UTILS . "utils.inc.php");
 include(UTILS . "common.inc.php");

@@ -14,9 +14,8 @@ function loadView($pathVi = '', $templateName = '', $arrPassValue = '') {
         // die();
     }
 }
-function loadModel($model_path,$model_name, $function, $arrArg = '', $arrArg2 = ''){
+function loadModel($model_path,$model_name, $function, $arrArgument = false){
     $model=$model_path . $model_name . '.class.singleton.php';
-
     if (file_exists($model)) {
         include_once($model);
         $modelClass = $model_name;
@@ -26,14 +25,13 @@ function loadModel($model_path,$model_name, $function, $arrArg = '', $arrArg2 = 
         }
 
         $obj = $modelClass::getInstance();
-            if (isset($arrArgument)){
-                if (isset($arrArgument2)) {
-                    return call_user_func(array($obj, $function),$arrArgument,$arrArgument2);
-                }
-                return call_user_func(array($obj, $function),$arrArgument);
-            }
-            
-        } else {
-            throw new Exception();
+        if ($arrArgument != false){
+           return call_user_func(array($obj, $function),$arrArgument);
         }
+
+        return call_user_func(array($obj, $function));
+            
+    } else {
+        throw new Exception();
+    }
 }

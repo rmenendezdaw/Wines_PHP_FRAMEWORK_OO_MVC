@@ -3,7 +3,7 @@ function carousel(){
 
         type: "GET",
         dataType: "JSON",
-        url: "module/home/controller/controller_home.php?op=slider"
+        url: amigable("?module=home&function=load_slider")
     })
     .done(function(data) {
         console.log(data);
@@ -11,11 +11,11 @@ function carousel(){
             // console.log(data[row].code);
             if (row == 0) {
                 $('<div></div>').attr({'class':"carousel-item active",
-                "style":"background-image: url("+data[row].img_wine+");height:100%;background-size: cover;background-position: center center;"}).appendTo('.carousel-inner').html (
+                "style":"background-image: url(http://localhost/Wines_PHP_FRAMEWORK_OO_MVC/"+data[row].img_wine+");height:100%;background-size: cover;background-position: center center;"}).appendTo('.carousel-inner').html (
                     '<h2 id="'+data[row].code+'" class="img-text">'+data[row].name+'<br>'+data[row].year+'</h2>');
         
             }else {
-            $('<div></div>').attr({'id':+data[row].code,'class':"carousel-item", "style":"background-image: url("+data[row].img_wine+");height:100%;background-size: cover;background-position: center center;"}).appendTo('.carousel-inner').html (
+            $('<div></div>').attr({'id':+data[row].code,'class':"carousel-item", "style":"background-image: url(http://localhost/Wines_PHP_FRAMEWORK_OO_MVC/"+data[row].img_wine+");height:100%;background-size: cover;background-position: center center;"}).appendTo('.carousel-inner').html (
                 '<h2 id="'+data[row].code+'" class="img-text">'+data[row].name+'<br>'+data[row].year+'</h2>');
             //  $('<div></div>').attr({'id':"catdiv", "style":"flex: 0 0 33.33333%;max-width:33.33333%;"}).appendTo('#main_contents').html ('<a href="" class="card">'+data[row].img_wine+'</a> ');
             }
@@ -144,9 +144,9 @@ $.ajax({
 $(document).ready(function(){
 
     console.log("In JS");
-add_visited();
+// add_visited();
 carousel();
-Type_cat(0);
-scroll_cat();
-moreRelated();
+// Type_cat(0);
+// scroll_cat();
+// moreRelated();
 });

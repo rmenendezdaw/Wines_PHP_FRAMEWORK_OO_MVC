@@ -4,4 +4,8 @@
         <name>home_list</name>
         <uri>home_list</uri>
     </function>
+    <function>
+        <name>load_slider</name>
+        <uri>load_slider</uri>
+    </function>
 </functions>

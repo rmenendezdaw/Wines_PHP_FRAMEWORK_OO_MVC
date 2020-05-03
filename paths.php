@@ -21,6 +21,8 @@ define('PATH_TOASTR', SITE_PATH . 'view/toastr/');
 //JS
 define('JS_PATH', SITE_PATH . 'view/js/');
 define('INI_PATH_API', SITE_ROOT . 'view/js/api_keys/');
+//MODEL
+define('MODEL_PATH', SITE_ROOT . 'model/');
 
 //UTILS
 define('UTILS', SITE_ROOT . 'utils/');
@@ -32,8 +34,11 @@ define('VIEW_PATH_INC', SITE_ROOT . 'view/includes/');
 
 //MODULE CONTACT
 define('JS_VIEW_CONTACT', SITE_PATH . 'modules/contact/view/js/');
-//MODULE CONTACT
+//MODULE HOME
 define('JS_VIEW_HOME', SITE_PATH . 'modules/home/view/js/');
-
+define('MODEL_HOME', SITE_ROOT . 'modules/home/model/model/');
+define('MODEL_PATH_HOME', SITE_ROOT . 'modules/home/model/');
+define('DAO_HOME', SITE_ROOT . 'modules/home/model/DAO/');
+define('BLL_HOME', SITE_ROOT . 'modules/home/model/BLL/');
 //AMIGABLES
 define('URL_AMIGABLES', TRUE);

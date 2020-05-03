@@ -11,7 +11,7 @@
 
         private function __construct() {
             $this->setConexion();
-            $this->conectar();
+            $this->connect();
         }
         
         private function setConexion() {
