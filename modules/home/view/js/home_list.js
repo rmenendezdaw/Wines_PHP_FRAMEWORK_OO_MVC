@@ -64,7 +64,7 @@ $('.catdiv').on("click", function() {
     type = this.getAttribute('id');
     // console.log(type);
     localStorage.setItem('type', type);
-    setTimeout(window.location.href="index.php?page=controller_shop&op=list",1000);
+    // setTimeout(window.location.href="index.php?page=controller_shop&op=list",1000);
 });
 }
 
@@ -79,38 +79,40 @@ $(document).on("scroll", function() {
     }    
 });
 }
-function count_cat(){
-$.ajax({
+// function count_cat(){
+// $.ajax({
 
-    type: "GET",
-    dataType: "JSON",
-    url: "module/home/controller/controller_home.php?op=type_cat&num="+num,
-})
-.done(function(data) {
-    console.log(data);
-    for (row in data) {
+//     type: "GET",
+//     dataType: "JSON",
+//     url: "module/home/controller/controller_home.php?op=type_cat&num="+num,
+// })
+// .done(function(data) {
+//     console.log(data);
+//     for (row in data) {
 
-      $('<div></div>').attr({'id':data[row].type,'class':"catdiv",
-       "style":"flex: 0 0 33.33333%;max-width:33.33333%; background-image: url("+data[row].img+");"
-    }).appendTo('#main_contents').html ('<p class="intdiv">'+data[row].type+'</p> ');
-    }
-    categories();
-})
-.fail(function() {
-});
+//       $('<div></div>').attr({'id':data[row].type,'class':"catdiv",
+//        "style":"flex: 0 0 33.33333%;max-width:33.33333%; background-image: url("+data[row].img+");"
+//     }).appendTo('#main_contents').html ('<p class="intdiv">'+data[row].type+'</p> ');
+//     }
+//     categories();
+// })
+// .fail(function() {
+// });
 
-}
+// }
 function add_visited(){
 $(document).on("click", '.catdiv',function(){
     id = this.getAttribute('id');
     console.log(id);
     $.ajax({
-        type: "GET",
+        type: "POST",
         dataType: "JSON",
-        url: "module/home/controller/controller_home.php?op=visited&id="+id,
+        data: {"code": id},
+        url: amigable("?module=home&function=add_visit")
     })
     .done(function(data) {
         console.log(data);
+        localStorage.setItem('type', id);
     })
     .fail(function() {
         console.log("fail");
@@ -142,8 +144,7 @@ $.ajax({
 }
 $(document).ready(function(){
 
-    console.log("In JS");
-// add_visited();
+add_visited();
 carousel();
 Type_cat(0);
 scroll_cat();

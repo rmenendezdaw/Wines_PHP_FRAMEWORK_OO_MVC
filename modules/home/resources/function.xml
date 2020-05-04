@@ -12,5 +12,9 @@
         <name>load_categories</name>
         <uri>load_categories</uri>
     </function>
+    <function>
+        <name>add_visit</name>
+        <uri>add_visit</uri>
+    </function>
     
 </functions>

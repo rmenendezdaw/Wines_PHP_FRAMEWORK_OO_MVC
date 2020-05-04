@@ -22,7 +22,10 @@ class home_dao {
         $stmt = $db->execute($sql);
         return $db->list($stmt);
     }
-
+    public function update_visit($db,$id) {
+        $sql='UPDATE categories SET more_visited=more_visited+1 WHERE type="'. $id . '"';
+        return $db->execute($sql);
+    }
     public function select_data_details($db,$arrArgument) {
         $sql = "SELECT name,chip,breed,sex,stature,picture,date_birth,tlp,country,province,city,cinfo,dinfo FROM dogs WHERE chip = '$arrArgument'";
         $stmt = $db->execute($sql);

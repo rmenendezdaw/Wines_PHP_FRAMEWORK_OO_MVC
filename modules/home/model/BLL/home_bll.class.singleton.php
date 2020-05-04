@@ -23,6 +23,9 @@
           public function categories_BLL($arrArgument){
             return $this->dao->select_categories($this->db,$arrArgument);
           }
+          public function add_visit_BLL($arrArgument){
+            return $this->dao->update_visit($this->db,$arrArgument);
+          }
           public function obtain_data_details_BLL($arrArgument){
             return $this->dao->select_data_details($this->db,$arrArgument);
           }

@@ -24,4 +24,10 @@ class controller_home {
         $json = loadModel(MODEL_HOME, "home_model", "load_categories_model", $_POST['data']);
         echo json_encode($json);
     }
+    function add_visit(){
+        // print_r($_POST['code']);
+        $json = array();
+        $json = loadModel(MODEL_HOME, "home_model", "add_visit_model", $_POST['code']);
+        echo json_encode($json);
+    }
 }
