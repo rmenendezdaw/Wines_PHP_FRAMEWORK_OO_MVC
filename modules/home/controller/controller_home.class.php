@@ -15,7 +15,7 @@ class controller_home {
     }
     function load_slider() {
         $json = array();
-        $json = loadModel(MODEL_HOME, "home_model", "slider", "hola");
+        $json = loadModel(MODEL_HOME, "home_model", "slider");
         echo json_encode($json);
     }
     function load_categories() {

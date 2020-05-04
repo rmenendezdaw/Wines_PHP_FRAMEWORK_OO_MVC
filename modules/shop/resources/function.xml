@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<functions>
+    <function>
+        <name>shop_list</name>
+        <uri>shop_list</uri>
+    </function>
+    <function>
+        <name>product_list</name>
+        <uri>product_list</uri>
+    </function>
+    <function>
+        <name>details_shop</name>
+        <uri>details_shop</uri>
+    </function>
+</functions>

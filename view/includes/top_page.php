@@ -27,7 +27,6 @@
   <link href="<?php echo VENDOR_PATH ?>bootstrap/css/bootstrap.min.css" rel="stylesheet">
   
   <!-- TOASTR -->
-	 <link href="view/toastr/plugins/toastr/toastr.min.css" rel="stylesheet">
 	<link href="<?php echo CSS_PATH ?>full-width-pics.css" rel="stylesheet" type="text/css">
 
 	<script type="text/javascript"  src="<?php echo LANG_PATH ?>translate.js"></script>

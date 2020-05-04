@@ -2,7 +2,7 @@
 function list_ajax(url){
 
     $.ajax({
-        type: "GET",
+        type: "POST",
         dataType: "JSON",
         url: url,
     })

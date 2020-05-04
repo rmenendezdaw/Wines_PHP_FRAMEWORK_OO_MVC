@@ -40,5 +40,11 @@ define('MODEL_HOME', SITE_ROOT . 'modules/home/model/model/');
 define('MODEL_PATH_HOME', SITE_ROOT . 'modules/home/model/');
 define('DAO_HOME', SITE_ROOT . 'modules/home/model/DAO/');
 define('BLL_HOME', SITE_ROOT . 'modules/home/model/BLL/');
+//MODULE SHOP
+define('JS_VIEW_SHOP', SITE_PATH . 'modules/shop/view/js/');
+define('MODEL_SHOP', SITE_ROOT . 'modules/shop/model/model/');
+define('MODEL_PATH_SHOP', SITE_ROOT . 'modules/shop/model/');
+define('DAO_SHOP', SITE_ROOT . 'modules/shop/model/DAO/');
+define('BLL_SHOP', SITE_ROOT . 'modules/shop/model/BLL/');
 //AMIGABLES
 define('URL_AMIGABLES', TRUE);
