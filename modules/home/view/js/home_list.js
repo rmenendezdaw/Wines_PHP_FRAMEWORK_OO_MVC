@@ -1,12 +1,12 @@
 function carousel(){
     $.ajax({
 
-        type: "GET",
+        type: "POST",
         dataType: "JSON",
         url: amigable("?module=home&function=load_slider")
     })
     .done(function(data) {
-        console.log(data);
+        // console.log(data);
         for (row in data) {
             // console.log(data[row].code);
             if (row == 0) {
@@ -27,22 +27,21 @@ function carousel(){
 });
 
 }
-function Type_cat(num){
-
-
+function Type_cat(limit){
+data= {"data":limit};
 $.ajax({
 
-    type: "GET",
+    type: "POST",
     dataType: "JSON",
     async: false,
-    url: "module/home/controller/controller_home.php?op=type_cat&num="+num,
+    data: data,
+    url: amigable("?module=home&function=load_categories")
 })
 .done(function(data) {
     console.log(data);
     for (row in data) {
-
       $('<div></div>').attr({'id':data[row].type,'class':"catdiv",
-       "style":"flex: 0 0 33.33333%;max-width:33.33333%; background-image: url("+data[row].img+");"
+       "style":"flex: 0 0 33.33333%;max-width:33.33333%; background-image: url(http://localhost/Wines_PHP_FRAMEWORK_OO_MVC/"+data[row].img+");"
     }).appendTo('#main_contents').html ('<p class="intdiv">'+data[row].type+'</p> ');
     }
     categories();
@@ -146,7 +145,7 @@ $(document).ready(function(){
     console.log("In JS");
 // add_visited();
 carousel();
-// Type_cat(0);
-// scroll_cat();
-// moreRelated();
+Type_cat(0);
+scroll_cat();
+moreRelated();
 });

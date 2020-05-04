@@ -41,6 +41,7 @@
     <script type="text/javascript" src="<?php echo JS_VIEW_CONTACT ?>contact_list.js"></script>
     <script type="text/javascript" src="<?php echo JS_VIEW_HOME ?>home_list.js"></script>
     <script type="text/javascript" src="<?php echo IMG_PATH ?>404.html"></script>
+    <script type="text/javascript" src="<?php echo LANG_PATH ?>translate.js"></script>
 
   <script type="text/javascript" src="<?php echo PATH_TOASTR ?>toastr.js"></script> 
   <link href="<?php echo CSS_TOASTR ?>toastr.css" rel="stylesheet"/> 
@@ -48,7 +49,6 @@
   <!-- <script src="module/search/model/search.js"></script>
   <script src="module/login/model/activity.js"></script>
   <script src="module/cart/model/controller_cart.js"></script> -->
-
 	<!-- <script type="text/javascript" src="lang/translate.js"></script> -->
 </head>
 

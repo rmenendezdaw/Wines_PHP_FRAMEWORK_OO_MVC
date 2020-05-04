@@ -17,6 +17,11 @@ class home_dao {
         $stmt = $db->execute($sql);
         return $db->list($stmt);
     }
+    public function select_categories($db,$limit) {
+        $sql='SELECT type, img FROM categories LIMIT '. $limit . ',3';
+        $stmt = $db->execute($sql);
+        return $db->list($stmt);
+    }
 
     public function select_data_details($db,$arrArgument) {
         $sql = "SELECT name,chip,breed,sex,stature,picture,date_birth,tlp,country,province,city,cinfo,dinfo FROM dogs WHERE chip = '$arrArgument'";

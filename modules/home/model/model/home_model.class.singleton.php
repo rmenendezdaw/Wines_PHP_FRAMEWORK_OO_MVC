@@ -22,6 +22,9 @@ class home_model {
     public function slider(){
         return $this->bll->slider_BLL();
     }
+    public function load_categories_model($arrArgument){
+        return $this->bll->categories_BLL($arrArgument);
+    }
     public function obtain_data_details($arrArgument){
         return $this->bll->obtain_data_details_BLL($arrArgument);
     }

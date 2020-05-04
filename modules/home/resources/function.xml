@@ -8,4 +8,9 @@
         <name>load_slider</name>
         <uri>load_slider</uri>
     </function>
+    <function>
+        <name>load_categories</name>
+        <uri>load_categories</uri>
+    </function>
+    
 </functions>

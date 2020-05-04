@@ -18,4 +18,10 @@ class controller_home {
         $json = loadModel(MODEL_HOME, "home_model", "slider", "hola");
         echo json_encode($json);
     }
+    function load_categories() {
+        // print_r($_POST['data']);
+        $json = array();
+        $json = loadModel(MODEL_HOME, "home_model", "load_categories_model", $_POST['data']);
+        echo json_encode($json);
+    }
 }
