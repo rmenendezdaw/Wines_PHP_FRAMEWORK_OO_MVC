@@ -24,7 +24,16 @@
             return $this->dao->select_categories($this->db,$arrArgument);
           }
           public function obtain_data_details_BLL($arrArgument){
-            return $this->dao->select_data_details($this->db,$arrArgument);
+            $details=$this->dao->select_details($this->db,$arrArgument);
+            $this->dao->update_visit_product($this->db,$arrArgument);
+             return $details;
           }
+          public function obtain_products_BLL(){
+            return $this->dao->count_pagination($this->db);
+          }
+          public function obtain_pagination_BLL($arrArgument){
+            return $this->dao->pagination($this->db, $arrArgument);
+          }
+          
          
 }

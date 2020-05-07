@@ -9,7 +9,19 @@
         <uri>product_list</uri>
     </function>
     <function>
-        <name>details_shop</name>
-        <uri>details_shop</uri>
+        <name>categories_list</name>
+        <uri>categories_list</uri>
+    </function>
+    <function>
+        <name>details_list</name>
+        <uri>details_list</uri>
+    </function>
+    <function>
+        <name>count_products_shop</name>
+        <uri>count_products_shop</uri>
+    </function>
+    <function>
+        <name>pagination_shop</name>
+        <uri>pagination_shop</uri>
     </function>
 </functions>

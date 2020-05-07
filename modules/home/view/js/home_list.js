@@ -56,7 +56,7 @@ $('.img-text').on("click", function() {
     id = this.getAttribute('id');
     // console.log(type);
     localStorage.setItem('id', id);
-    setTimeout(window.location.href="index.php?page=controller_shop&op=list",1000);
+    setTimeout(window.location.href=amigable("?module=shop&function=shop_list"),1000);
 });
 }
 function categories (){
@@ -64,7 +64,7 @@ $('.catdiv').on("click", function() {
     type = this.getAttribute('id');
     // console.log(type);
     localStorage.setItem('type', type);
-    // setTimeout(window.location.href="index.php?page=controller_shop&op=list",1000);
+    setTimeout(window.location.href=amigable("?module=shop&function=shop_list"),1000);
 });
 }
 

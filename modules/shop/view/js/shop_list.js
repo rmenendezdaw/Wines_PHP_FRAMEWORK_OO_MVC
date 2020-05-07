@@ -2,7 +2,7 @@
 function list_ajax(url){
     console.log(url);
     $.ajax({
-        type: "POST",
+        type: "GET",
         dataType: "JSON",
         url: url,
     })
@@ -17,19 +17,18 @@ function list_ajax(url){
             +data[row].name+'<br>'+data[row].mark+'<br>'+data[row].year+'</p><hr>');
             $('<div></div>').attr({'class':"btn-fav"}).appendTo('#'+data[row].code).html('<svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z"></path></svg>');
         }
-            show_fav();
+            // show_fav();
             localStorage.removeItem('type');
         
         }else {
             $('#prods').empty();
             for (row in data) {
-
                 $('<div></div>').attr({'class':"prodiv", "style":"flex: 0 0 33.33333%;max-width:33.33333%; "})
                 .appendTo('#prods').html ('<p class="prodcard" id="'+data[row].code+'">'
                 +data[row].name+'<br>'+data[row].mark+'<br>'+data[row].year+'</p><hr>');
                 $('<div></div>').attr({'class':"btn-fav"}).appendTo('#'+data[row].code).html('<svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="star" class="svg-inline--fa fa-star fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z"></path></svg>');
               }
-              show_fav();
+            //   show_fav();
               console.log(data.length);
 
         }
@@ -48,7 +47,7 @@ function list_prod(){
 }
 function list_categories(){
         type = localStorage.getItem('type');
-        list_ajax("module/shop/controller/controller_shop.php?op=list_cat&type="+type);
+        list_ajax(amigable("?module=shop&function=categories_list&type="+type));
 }
 function details_ajax(url){
     $.ajax({
@@ -57,7 +56,7 @@ function details_ajax(url){
         url: url,
     })
     .done(function(data) {
-        console.log(data);
+            data=data[0];
             $('#content').empty();
             $('<div></div>').attr('class','myh1').appendTo('#content').html(
                 data.name+', '+data.mark
@@ -65,7 +64,7 @@ function details_ajax(url){
           
             $('<div></div>').attr('id','details_prod').appendTo('#content');
             $('<div></div>').attr({'class':'div_details'}).appendTo('#details_prod').html(
-                 '<img class="card-img-top" src="'+data.img_wine+'" />'
+                 '<img class="card-img-top" src="http://localhost/Wines_PHP_FRAMEWORK_OO_MVC/'+data.img_wine+'" />'
             );
             $('<div></div>').attr('id','detail').appendTo('.div_details').html(
                 '<br><span>Name:   <span id="name">'+data.name+'</span></span></br>'+
@@ -94,7 +93,7 @@ function details_prod(){
          var id = this.getAttribute('id');
          console.log(even.target);
          if (!$(event.target).is('.btn-fav, svg , path')) {
-            details_ajax("module/shop/controller/controller_shop.php?op=details_prod&modal=" + id);
+            details_ajax(amigable("?module=shop&function=details_list&id="+id));
         }
         });
 
@@ -102,8 +101,7 @@ function details_prod(){
 
 function detail_carousel(){
     id = localStorage.getItem('id');
-    details_ajax("module/shop/controller/controller_shop.php?op=details_prod&modal=" + id);
-    // localStorage.removeItem('id');
+    details_ajax(amigable("?module=shop&function=details_list&id="+id));
 
 }
 function create_filters(){
@@ -240,10 +238,9 @@ function modal_map(){
                 $("#details_map").show();
                 $("#container-map").dialog({
                     title:"Map",
-                    width: 850, //<!-- ------------- ancho de la ventana -->
-                    height: 500, //<!--  ------------- altura de la ventana -->
-                    resizable: "false", //<!-- ------ fija o redimensionable si ponemos este valor a "true" -->
-                    modal: "true", //<!-- ------------ si esta en true bloquea el contenido de la web mientras la ventana esta activa (muy elegante) --> modal: "true", //<!-- ------------ si esta en true bloquea el contenido de la web mientras la ventana esta activa (muy elegante) -->
+                    width: 850, 
+                    height: 500, 
+                    resizable: "false", 
                     buttons: {
                         Ok: function () {
                             $(this).dialog('close');
@@ -268,26 +265,6 @@ function demand_name(){
               localStorage.removeItem('val');
               localStorage.removeItem('mark');
 }
-function add_visited(){
-    $(document).on("click", '.prodcard',function(){
-        id = this.getAttribute('id');
-        console.log(id);
-        $.ajax({
-            type: "GET",
-            dataType: "JSON",
-            url: "module/shop/controller/controller_shop.php?op=visited&id="+id,
-        })
-        .done(function(data) {
-            console.log(data);
-        })
-        .fail(function() {
-            console.log("fail");
-    
-        });
-
-    });
-}
-
 // function scroll_cat(){
 //     $(document).on("scroll", function() {
 //         if($(window).scrollTop() === ($(document).height()-$(window).height())){
@@ -303,10 +280,10 @@ function Pagination(){
     $.ajax({
         type: "GET",
         dataType: "JSON",
-        url: "module/shop/controller/controller_shop.php?op=count_pagination",
+        url: amigable("?module=shop&function=count_products_shop"),
     })
     .done(function(data) {
-        // console.log(data[0].total);
+        console.log(data[0].total);
         for(i=0;i<data[0].total;i++){
             // console.log("data");
             if (i % 10 == 0){
@@ -326,11 +303,11 @@ function Pagination(){
             $.ajax({
                 type: "GET",
                 dataType: "JSON",
-                url: "module/shop/controller/controller_shop.php?op=pagination&item_num="+item_num,
+                url: amigable("?module=shop&function=pagination_shop&param="+item_num),
             })
             .done(function(data) {
                     console.log(data);
-                    list_ajax("module/shop/controller/controller_shop.php?op=pagination&item_num="+item_num);
+                    list_ajax(amigable("?module=shop&function=pagination_shop&param="+item_num));
 
             })
             .fail(function() {
@@ -346,26 +323,24 @@ function Pagination(){
 
 $(document).ready(function(){
     
-    list_prod();
 
-    // add_visited();
-    // if (localStorage.getItem('type')){
-    //     list_categories();
-    //     map();
-    //     create_filters();
-    //     // Pagination();
-    // }else if(localStorage.getItem('id')){ 
-    //     detail_carousel();
-    // }else if(localStorage.getItem('val')||localStorage.getItem('type_search')||localStorage.getItem('mark')) { 
-    //     map();
-    //     create_filters();
-    //     demand_name();
-    //     Pagination();
-    // }else{
-    //     // scroll_cat();
-    //     list_prod();
-    //     map();
-    //     create_filters();
-    //     Pagination();
-    // }
+    if (localStorage.getItem('type')){
+        list_categories();
+        map();
+        create_filters();
+        // Pagination();
+    }else if(localStorage.getItem('id')){ 
+        detail_carousel();
+    }else if(localStorage.getItem('val')||localStorage.getItem('type_search')||localStorage.getItem('mark')) { 
+        map();
+        create_filters();
+        demand_name();
+        Pagination();
+    }else{
+        // scroll_cat();
+        list_prod();
+        map();
+        create_filters();
+        Pagination();
+    }
 });

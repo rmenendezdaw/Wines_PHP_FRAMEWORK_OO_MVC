@@ -31,8 +31,8 @@
 
 		<!-- <script src="module/search/model/search.js"></script> -->
 		<!-- Bootpag -->
-		<!-- <script type="text/javascript" src="http://botmonster.com/jquery-bootpag/jquery.bootpag.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.js"></script>
+		 <script type="text/javascript" src="http://botmonster.com/jquery-bootpag/jquery.bootpag.js"></script>
+		<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.js"></script>
 		<script src="view/js/utils.js"></script>
 		<script src="module/cart/model/controller_cart.js"></script>
 		<script src="module/favorites/model/controller_favorites.js"></script>

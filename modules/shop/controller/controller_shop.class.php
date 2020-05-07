@@ -17,10 +17,27 @@ class controller_shop {
         $json = loadModel(MODEL_SHOP, "shop_model", "obtain_data_list");
         echo json_encode($json);
     }
-    // function details_list() {
-    //     $json = array();
-    //     $json = loadModel(MODEL_SHOP, "shop_model", "details_list_model");
-    //     echo json_encode($json);
-    // }
+    function categories_list() {
+        $json = array();
+        $json = loadModel(MODEL_SHOP, "shop_model", "load_categories_model", $_GET['param']);
+        echo json_encode($json);
+    }
+    function details_list() {
+        $json = array();
+        $json = loadModel(MODEL_SHOP, "shop_model", "details_list_model", $_GET['param']);
+        echo json_encode($json);
+    }
+    function count_products_shop() {
+        $json = array();
+        $json = loadModel(MODEL_SHOP, "shop_model", "count_products_model");
+        echo json_encode($json);
+    }
+    function pagination_shop() {
+        $json = array();
+        $json = loadModel(MODEL_SHOP, "shop_model", "pagination_list_model", $_GET['param']);
+        echo json_encode($json);
+    }
+
+    
     
 }
