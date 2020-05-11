@@ -19,4 +19,8 @@ class controller_login {
         loadView('modules/login/view/','register.html');
         require(VIEW_PATH_INC . "footer.html");
     }
+    function login() {
+        echo loadModel(MODEL_LOGIN, "login_model", "compare_model", $_POST);
+    }
+
 }

@@ -147,7 +147,7 @@ function validate_login(){
 
                 type: "POST",
                 dataType: "JSON",
-                url: "module/login/controller/controller_login.php?op=login",
+                url: amigable("?module=login&function=login"),
                 data: data
             })
             .done(function(data){

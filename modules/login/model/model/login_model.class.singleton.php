@@ -1,12 +1,12 @@
 <?php
-class shop_model {
+class login_model {
 
     private $bll;
     static $_instance;
 
     private function __construct() {
 
-        $this->bll = shop_bll::getInstance();
+        $this->bll = login_bll::getInstance();
 
     }
 
@@ -22,8 +22,8 @@ class shop_model {
     public function obtain_data_list(){
         return $this->bll->obtain_data_list_BLL();
     }
-    public function load_categories_model($arrArgument){
-        return $this->bll->categories_BLL($arrArgument);
+    public function compare_model($arrArgument){
+        return $this->bll->compare_BLL($arrArgument);
     }
     public function add_visit_model($arrArgument){
         return $this->bll->add_visit_BLL($arrArgument);

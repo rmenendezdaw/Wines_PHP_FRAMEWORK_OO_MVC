@@ -8,4 +8,12 @@
         <name>register_list</name>
         <uri>register_list</uri>
     </function>
+    <function>
+        <name>login</name>
+        <uri>login</uri>
+    </function>
+    <function>
+        <name>register</name>
+        <uri>register</uri>
+    </function>
 </functions>

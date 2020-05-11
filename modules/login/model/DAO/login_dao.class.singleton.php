@@ -1,5 +1,5 @@
 <?php
-class shop_dao {
+class login_dao {
     static $_instance;
 
     private function __construct() {
@@ -12,8 +12,8 @@ class shop_dao {
         }
         return self::$_instance;
     }
-    public function select_all_products($db) {        
-        $sql='SELECT * FROM wines ORDER BY more_visited DESC LIMIT 10 ';
+    public function select_user($db, $user) {        
+        $sql="select * from users where username='$user'";
         $stmt = $db->execute($sql);
         return $db->list($stmt);
     }
