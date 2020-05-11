@@ -17,11 +17,11 @@
             <a class="nav-link" href="<?php amigable('?module=shop&function=shop_list'); ?>" data-tr="">Shop</a>
           </li>
           <li class="nav-item">
-            <!-- <a class="nav-link" href="<?php amigable('?module=login&function=login_list'); ?>" data-tr="Log in"></a>
+          <a class="nav-link" href="<?php amigable('?module=login&function=login_list'); ?>" data-tr="">Log in</a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" href="<?php amigable('?module=cart&function=cart'); ?>" data-tr="Cart"></a>
-          </li> -->
+          </li>  -->
           <li class="nav-item">
             <a class="nav-link" href="<?php amigable('?module=contact&function=contact_list'); ?>" >Contact</a>
           </li>
