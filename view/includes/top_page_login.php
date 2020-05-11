@@ -23,6 +23,10 @@
 		<link href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" rel="stylesheet">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.js"></script>
 
+
+
+		<script type="text/javascript" src="<?php echo JS_VIEW_LOGIN ?>login_list.js"></script>
+
 		<!-- <script src="view/js/utils.js"></script>
 		<script src="module/login/model/activity.js"></script>
 		<script src="module/cart/model/controller_cart.js"></script>

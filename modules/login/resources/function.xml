@@ -4,4 +4,8 @@
         <name>login_list</name>
         <uri>login_list</uri>
     </function>
+    <function>
+        <name>register_list</name>
+        <uri>register_list</uri>
+    </function>
 </functions>
