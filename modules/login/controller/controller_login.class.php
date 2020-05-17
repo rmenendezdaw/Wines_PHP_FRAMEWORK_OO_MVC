@@ -22,5 +22,29 @@ class controller_login {
     function login() {
         echo loadModel(MODEL_LOGIN, "login_model", "compare_model", $_POST);
     }
+    function register() {
+        $insert=loadModel(MODEL_LOGIN, "login_model", "setUser_data", $_POST);
 
+        $arrArgument = array(
+            'type' => 'alta',
+            'token' => $insert,
+            'inputName' => $_POST['username'],
+            'inputEmail' => $_POST['email'],
+            'inputSubject' => $_POST['matter'],
+            'inputMessage' => $_POST['message']
+        );
+        if($insert!=false){
+
+            send_email($arrArgument);
+            echo json_encode("success");
+        }
+    }
+    function active_user() {
+        loadModel(MODEL_LOGIN, "login_model", "activate_user", $_GET['param']);
+        require(VIEW_PATH_INC . "top_page_login.php");
+        require(VIEW_PATH_INC . "header.html");
+        require(VIEW_PATH_INC . "menu/menu.php");
+        loadView('modules/login/view/','login.html');
+        require(VIEW_PATH_INC . "footer.html");
+    }
 }

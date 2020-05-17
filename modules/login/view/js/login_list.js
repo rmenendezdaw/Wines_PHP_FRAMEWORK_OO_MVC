@@ -94,19 +94,20 @@ function validate_register(){
 
                 type: "POST",
                 dataType: "JSON",
-                url: "module/login/controller/controller_login.php?op=register",
+                url: amigable("?module=login&function=register"),
                 data: data
             })
             .done(function(data){
                 console.log(data);
-                if (data===true){
-                    window.location= "index.php?page=controller_login&op=login";
+                if (data=="success"){
+                    toastr.success("Successfull register");
+                    // window.location= "index.php?page=controller_login&op=login";
                 }else{
                     alert("Error of register");
                 }
             })
             .fail(function(){
-                alert("The user already exists");
+                // alert("The user already exists");
 
             })
             

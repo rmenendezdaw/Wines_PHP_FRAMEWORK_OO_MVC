@@ -25,14 +25,11 @@ class login_model {
     public function compare_model($arrArgument){
         return $this->bll->compare_BLL($arrArgument);
     }
-    public function add_visit_model($arrArgument){
-        return $this->bll->add_visit_BLL($arrArgument);
+    public function setUser_data($arrArgument){
+        return $this->bll->setUser_data_BLL($arrArgument);
     }
-    public function details_list_model($arrArgument){
-        return $this->bll->obtain_data_details_BLL($arrArgument);
-    }
-    public function count_products_model(){
-        return $this->bll->obtain_products_BLL();
+    public function activate_user($arrArgument){
+        return $this->bll->activate_user_BLL($arrArgument);
     }
     public function pagination_list_model($arrArgument){
         return $this->bll->obtain_pagination_BLL($arrArgument);

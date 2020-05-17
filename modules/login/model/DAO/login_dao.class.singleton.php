@@ -17,20 +17,20 @@ class login_dao {
         $stmt = $db->execute($sql);
         return $db->list($stmt);
     }
-    public function select_categories($db, $type) {        
-        $sql="SELECT * FROM wines WHERE type='$type' ";
+    public function checkUser($db, $username) {        
+        $sql="SELECT * FROM users WHERE username='$username' ";
         $stmt = $db->execute($sql);
         return $db->list($stmt);
     }
-    public function select_details($db, $code) {        
-        $sql="SELECT * FROM wines WHERE code='$code' ";
+    public function insertUser($db,$username,$email,$avatar,$encrypt_password, $token) {        
+        $sql="insert into users values ('$username','$email','user','$avatar','$encrypt_password',5000,'$token',0,'$username')";
         $stmt = $db->execute($sql);
-        return $db->list($stmt);
+        return $stmt;
+
     }
-    public function count_pagination($db) {        
-        $sql="SELECT count(*) as total from wines";
+    public function activate_user($db,$token) {        
+        $sql="update users set activate=1 where token_email='$token'";
         $stmt = $db->execute($sql);
-        return $db->list($stmt);
     }
     public function pagination($db, $ofset) {        
         $sql='SELECT * FROM wines ORDER BY more_visited DESC LIMIT 10 OFFSET ' . $ofset;

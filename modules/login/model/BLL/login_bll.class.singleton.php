@@ -27,10 +27,23 @@
              }
              return "false";
           }
-          public function obtain_data_details_BLL($arrArgument){
-            $details=$this->dao->select_details($this->db,$arrArgument);
-            $this->dao->update_visit_product($this->db,$arrArgument);
-             return $details;
+          public function setUser_data_BLL($arrArgument){
+            $username=$arrArgument['username'];
+            $email=$arrArgument['email'];
+            $token=generate_Token_secure(20);
+            $encrypt_password=password_hash($arrArgument['password'], PASSWORD_DEFAULT);
+            $hash_avatar=md5 (strtolower( trim( $email) ) );
+            $avatar="https://www.gravatar.com/avatar/$hash_avatar?s=40&d=identicon";
+
+            $checkUser=$this->dao->checkUser($this->db,$arrArgument['username']);
+            if(empty($checkUser)){
+              $this->dao->insertUser($this->db,$username,$email,$avatar,$encrypt_password,$token);
+              return $token;
+            }
+            return false;
+          }
+          public function activate_user_BLL($arrArgument){
+            return $this->dao->activate_user($this->db, $arrArgument);
           }
          
 }

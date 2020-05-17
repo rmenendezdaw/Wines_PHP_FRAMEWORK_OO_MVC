@@ -9,7 +9,7 @@
         switch ($arr['type']) {
             case 'alta':
                 $subject = 'Tu Alta en Wines RM';
-                $ruta = "<a href=?module=home&function=active_user&param=" . $arr['token'] . ">aqu&iacute;</a>";
+                $ruta = "<a href='" . amigable("?module=login&function=active_user&token=" . $arr['token'], true) . "'>aqu&iacute;</a>";                $body = 'Gracias por unirte a nuestra aplicaci&oacute;n<br> Para finalizar el registro, pulsa ' . $ruta;
                 $body = 'Gracias por unirte a nuestra aplicaci&oacute;n<br> Para finalizar el registro, pulsa ' . $ruta;
                 break;
     
@@ -53,11 +53,11 @@
         //set_error_handler('ErrorHandler');
         try{
             if ($arr['type'] === 'admin'){
-                $address = 'WinesRM@gmail.com';
+                $address = 'WinesRMC@gmail.com';
             } else{ 
                 $address = $arr['inputEmail'];
             }
-            $result = send_mailgun('WinesRM@gmail.com', $address, $subject, $html); 
+            $result = send_mailgun('WinesRMC@gmail.com', $address, $subject, $html); 
         } catch (Exception $e) {
 			$return = 0;
 		}
@@ -74,7 +74,7 @@
        $message = array();
        $message['from'] = $from;
        $message['to'] =  $email;
-       $message['h:Reply-To'] = "WinesRMgmail.com";
+       $message['h:Reply-To'] = "WinesRMCgmail.com";
        $message['subject'] = $subject;
        $message['html'] = $html;
     
