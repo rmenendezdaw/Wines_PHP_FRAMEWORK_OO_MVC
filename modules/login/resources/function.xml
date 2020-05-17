@@ -20,5 +20,20 @@
         <name>active_user</name>
         <uri>active_user</uri>
     </function>
-    
+    <function>
+        <name>recover_list</name>
+        <uri>recover_list</uri>
+    </function>
+    <function>
+        <name>recover</name>
+        <uri>recover</uri>
+    </function>
+        <function>
+        <name>changePass_list</name>
+        <uri>changePass_list</uri>
+    </function>
+    <function>
+        <name>changePass</name>
+        <uri>changePass</uri>
+    </function>
 </functions>

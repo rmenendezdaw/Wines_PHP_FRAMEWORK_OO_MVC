@@ -31,8 +31,10 @@ class login_model {
     public function activate_user($arrArgument){
         return $this->bll->activate_user_BLL($arrArgument);
     }
-    public function pagination_list_model($arrArgument){
-        return $this->bll->obtain_pagination_BLL($arrArgument);
+    public function recover_model($arrArgument){
+        return $this->bll->recover_model_BLL($arrArgument);
     }
-    
+    public function changePass_model($arrArgument){
+        return $this->bll->changePass_model_BLL($arrArgument);
+    }
 }

@@ -191,10 +191,111 @@ function validate_login(){
       
     })
 }
+function validate_recov(){
+    var error_res = false;
+    var username = document.getElementById('username').value;
+    var v_username = validate_username(username);
 
+    if (!v_username){
+        document.getElementById('e_username').innerHTML = "Username is not valid";
+        error_res = true;
+    }else{
+        document.getElementById('e_username').innerHTML = "";
+    }
+    $("#recForm").submit(function (e) {
+        e.preventDefault();
+        if(error_res == false){
+            var data = {username: username};
+            $.ajax({
+                type: "POST",
+                dataType: "JSON",
+                url: amigable("?module=login&function=recover"),
+                data: data
+            })
+            .done(function(data){
+                console.log(data); 
+                if (data=="success"){
+                    toastr.success("Correct User");
+                }
+            })
+            .fail(function(){
+
+                // alert("Invalid credentials");
+
+            })
+            
+        }else{
+            console.log("error validation");
+            return false;
+        }
+      
+    })
+}
+function validate_Password(){
+    var error_res = false;
+
+	var password = document.getElementById('password').value;
+    var repassword = document.getElementById('repassword').value;
+
+    var v_password = validate_password(password);
+    var v_repassword = validate_repassword(repassword);
+
+    if (!v_password){
+        document.getElementById('e_password').innerHTML = "Password is not valid";
+        error_res = true;
+    }else{
+        document.getElementById('e_password').innerHTML = "";
+    }
+    if (!v_repassword){
+        document.getElementById('e_repassword').innerHTML = "Password is not valid";
+        error_res = true;
+    }else{
+        document.getElementById('e_repassword').innerHTML = "";
+    }
+    if(password!=repassword){
+        error_res=true;
+        document.getElementById('e_repassword').innerHTML = "The password aren't equals";
+    }else{
+        document.getElementById('e_repassword').innerHTML = "";
+    }
+
+    $("#passForm").submit(function (e) {
+        e.preventDefault();
+        
+        if(error_res == false){
+            var data = {password: password};
+            $.ajax({
+
+                type: "POST",
+                dataType: "JSON",
+                url: amigable("?module=login&function=changePass"),
+                data: data
+            })
+            .done(function(data){
+                console.log(data);
+                if (data=="success"){
+                    toastr.success("Successfull change pass");
+                }else{
+                    alert("Error of change password");
+                }
+            })
+            .fail(function(){
+
+            })
+            
+        }else{
+            console.log("error validation");
+            return false;
+        }
+      
+    })
+}
 $(document).ready(function(){
     $('header').remove();
     $(document).on('click', '#linkReg', function(){
         setTimeout(window.location.href=amigable("?module=login&function=register_list"),1000);
+    })
+    $(document).on('click', '#linkRecover', function(){
+        setTimeout(window.location.href=amigable("?module=login&function=recover_list"),1000);
     })
 })

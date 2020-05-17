@@ -23,7 +23,7 @@ class login_dao {
         return $db->list($stmt);
     }
     public function insertUser($db,$username,$email,$avatar,$encrypt_password, $token) {        
-        $sql="insert into users values ('$username','$email','user','$avatar','$encrypt_password',5000,'$token',0,'$username')";
+        $sql="insert into users values ('$username','$email','user','$avatar','$encrypt_password',5000,'$token',0,'$username','null')";
         $stmt = $db->execute($sql);
         return $stmt;
 
@@ -32,14 +32,13 @@ class login_dao {
         $sql="update users set activate=1 where token_email='$token'";
         $stmt = $db->execute($sql);
     }
-    public function pagination($db, $ofset) {        
-        $sql='SELECT * FROM wines ORDER BY more_visited DESC LIMIT 10 OFFSET ' . $ofset;
-        $stmt = $db->execute($sql);
-        return $db->list($stmt);
-    }
-    public function update_visit_product($db, $code) {        
-        $sql="UPDATE wines SET more_visited=more_visited+1 WHERE code='$code'";
+    public function updateToken($db,$username,$token) {        
+        $sql="UPDATE users SET token_recover='$token' WHERE username='$username'";
         $stmt = $db->execute($sql);
     }
-    
+    public function updatePassword($db, $password, $token) {        
+        $sql="UPDATE users SET password='$password' WHERE token_recover='$token'";
+        print_r($sql);
+        $stmt = $db->execute($sql);
+    }
 }

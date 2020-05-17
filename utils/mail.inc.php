@@ -15,7 +15,7 @@
     
             case 'changepass':
                 $subject = 'Tu Nuevo Password en Wines RM<br>';
-                $ruta = "<a href=?module=login&function=changepass&aux=" . $arr['token'] . ">aqu&iacute;</a>";
+                $ruta = "<a href='" . amigable("?module=login&function=changePass_list&token=" . $arr['token'], true) . "'>aqu&iacute;</a>";                $body = 'Gracias por unirte a nuestra aplicaci&oacute;n<br> Para finalizar el registro, pulsa ' . $ruta;
                 $body = 'Para recordar tu password pulsa ' . $ruta;
                 break;
                 

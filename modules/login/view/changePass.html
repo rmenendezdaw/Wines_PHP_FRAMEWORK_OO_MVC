@@ -1,0 +1,27 @@
+<div id="cont">
+    <div id="formPass">
+        <form method="POST" name="passForm" class="passForm" id="passForm">
+            <table>
+                <h3 data-tr=""> Change Password</h3>
+                <tr>
+                    <p>New Password: </p>
+                </tr>
+                <tr>
+                    <input type="password" id="password" placeholder="Password" size="20">
+                    <br><span id="e_password" class="styerror"></span>
+                </tr>
+                <br>
+                <tr>
+                    <p>Retype new password: </p>
+                </tr>
+                <tr>
+                    <input type="password" id="repassword" placeholder="Password" size="20">
+                    <br><span id="e_repassword" class="styerror"></span>
+                </tr>
+                <tr>
+                    <input name="sendPass" type="submit" id="sendPass" value="Send" onclick="validate_Password()"/>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
