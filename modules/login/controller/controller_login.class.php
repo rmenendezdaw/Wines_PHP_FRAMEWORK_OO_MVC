@@ -83,4 +83,11 @@ class controller_login {
         $arrArgument=array('password'=>$_POST['password'], 'token'=>$_SESSION['token']);
         $check=loadModel(MODEL_LOGIN, "login_model", "changePass_model", $arrArgument);
     }
+    function social() {
+        echo loadModel(MODEL_LOGIN, "login_model", "social_model", $_POST);
+        
+    }
+    function return_user_token(){
+        echo loadModel(MODEL_LOGIN, "login_model", "return_token_model", $_POST['jwt']);
+    }
 }

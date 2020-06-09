@@ -29,7 +29,10 @@
   <!-- TOASTR -->
 	<link href="<?php echo CSS_PATH ?>full-width-pics.css" rel="stylesheet" type="text/css">
 
-  <script type="text/javascript" src="<?php echo JS_PATH ?>main.js"></script> 
+  <script type="text/javascript" src="<?php echo JS_PATH ?>main.js"></script>
+  <script type="text/javascript" src="<?php echo JS_PATH ?>utils.js"></script> 
+  <script type="text/javascript" src="<?php echo JS_PATH ?>menu.js"></script> 
+
   <script type="text/javascript" src="<?php echo JS_PATH ?>api_keys/api_key.js"></script> 
 	<script type="text/javascript" src="<?php echo INI_PATH_API ?>api_key.ini"></script>
   

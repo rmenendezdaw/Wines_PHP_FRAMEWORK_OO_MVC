@@ -13,12 +13,12 @@ class login_dao {
         return self::$_instance;
     }
     public function select_user($db, $user) {        
-        $sql="select * from users where username='$user'";
+        $sql="select * from users where id_user='$user'";
         $stmt = $db->execute($sql);
         return $db->list($stmt);
     }
     public function checkUser($db, $username) {        
-        $sql="SELECT * FROM users WHERE username='$username' ";
+        $sql="SELECT * FROM users WHERE id_user='$username' ";
         $stmt = $db->execute($sql);
         return $db->list($stmt);
     }
@@ -38,7 +38,17 @@ class login_dao {
     }
     public function updatePassword($db, $password, $token) {        
         $sql="UPDATE users SET password='$password' WHERE token_recover='$token'";
-        print_r($sql);
         $stmt = $db->execute($sql);
+    }
+    public function insertSocial($db,$username,$email,$avatar,$id) {        
+        $sql="insert into users values ('$username','$email','user','$avatar','null',5000,'null',0,'$id','null')";
+        $stmt = $db->execute($sql);
+        return $stmt;
+
+    }
+    public function select_user_token($db, $name) {        
+        $sql="SELECT * FROM users WHERE id_user='$name' ";
+        $stmt = $db->execute($sql);
+        return $db->list($stmt);
     }
 }

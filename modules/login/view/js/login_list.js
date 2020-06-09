@@ -152,6 +152,7 @@ function validate_login(){
                 data: data
             })
             .done(function(data){
+                localStorage.setItem('JWT', data);
                 console.log(data);
                 MyPromise("POST", "module/cart/controller/controller_cart.php?op=getCart","JSON").then(function(data){
                     console.log(data);
@@ -290,7 +291,62 @@ function validate_Password(){
       
     })
 }
+function events(){
+    $(document).on('click','#socialBtn', function (){
+        console.log("butn");
+        webAuth.authorize();
+
+    })
+}
+function handleAuthentication() {
+    webAuth.parseHash(function(err, authResult) {
+        if (authResult && authResult.accessToken && authResult.idToken) {
+            window.location.hash = '';
+            setSession(authResult);
+        }else if (err) {
+            console.log(err);
+        }// end_else
+    });
+}// end_handleAuthentication
+function setSession(authResult) {
+    webAuth.client.userInfo(authResult.accessToken, function(err, profile) {
+        if (profile) {
+            console.log(profile);
+            data={sub:profile.sub, nickname:profile.nickname, picture:profile.picture, email:profile.email}
+            $.ajax({
+
+                type: "POST",
+                dataType: "JSON",
+                url: amigable("?module=login&function=social"),
+                data: data
+            })
+            .done(function(data){
+                console.log(data);
+                localStorage.setItem('JWT',data);
+                webAuth.logout({
+                    returnTo: 'http://localhost/Wines_PHP_FRAMEWORK_OO_MVC/home/home_list'
+                });
+            })
+            .fail(function(){
+
+            })
+        }else {
+            console.log(err);
+        }// end_else
+    });
+}// end_setSession
+var webAuth = new auth0.WebAuth({
+    domain: 'raulmen.auth0.com',
+    clientID: AUTH0_API_KEY,
+    redirectUri: 'http://localhost/Wines_PHP_FRAMEWORK_OO_MVC/login/login_list',
+    audience: 'https://' + 'raulmen.auth0.com' + '/userinfo',
+    responseType: 'token id_token',
+    scope: 'openid profile email',
+    leeway: 60
+  });
+
 $(document).ready(function(){
+    handleAuthentication();
     $('header').remove();
     $(document).on('click', '#linkReg', function(){
         setTimeout(window.location.href=amigable("?module=login&function=register_list"),1000);
@@ -298,4 +354,6 @@ $(document).ready(function(){
     $(document).on('click', '#linkRecover', function(){
         setTimeout(window.location.href=amigable("?module=login&function=recover_list"),1000);
     })
+
+events();
 })

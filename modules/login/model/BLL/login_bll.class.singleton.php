@@ -1,5 +1,5 @@
 <?php
-
+  require_once "utils/utils_jwt.inc.php";
 	class login_bll {
 	    private $dao;
 	    private $db;
@@ -23,7 +23,8 @@
     public function compare_BLL($arrArgument){
         $user=$this->dao->select_user($this->db, $arrArgument['username']);
         if (password_verify($arrArgument['password'],$user[0]['password'])){
-          return json_encode("Okay");
+          return json_encode(encode_token($user[0]['id_user']));
+
         }
         return "false";
     }
@@ -58,5 +59,21 @@
     public function changePass_model_BLL($arrArgument){
       $newPassword=password_hash($arrArgument['password'], PASSWORD_DEFAULT);
       return $this->dao->updatePassword($this->db, $newPassword, $arrArgument['token']);
-    }     
+    }
+    public function social_model_BLL($arrArgument){
+      $iduser=$arrArgument['sub'];
+      
+      $user=$this->dao->checkUser($this->db, $iduser);
+      if(empty($user)){
+        $user=$this->dao->insertSocial($this->db, $arrArgument['nickname'], $arrArgument['email'], $arrArgument['picture'], $iduser);
+      }
+      if($user){
+        return json_encode(encode_token($iduser));
+      }
+      // return $this->dao->insertSocial($this->db, $newPassword, $arrArgument['token']);
+    }
+    public function return_token_model_BLL($arrArgument){
+     $token=decode_token($arrArgument);
+      return json_encode($this->dao->select_user_token($this->db, json_decode($token, true)['name']));
+    }
 }

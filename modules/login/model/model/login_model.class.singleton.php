@@ -37,4 +37,10 @@ class login_model {
     public function changePass_model($arrArgument){
         return $this->bll->changePass_model_BLL($arrArgument);
     }
+    public function social_model($arrArgument){
+        return $this->bll->social_model_BLL($arrArgument);
+    }
+    public function return_token_model($arrArgument){
+        return $this->bll->return_token_model_BLL($arrArgument);
+    }
 }

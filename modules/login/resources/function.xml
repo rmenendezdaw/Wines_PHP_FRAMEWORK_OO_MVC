@@ -36,4 +36,12 @@
         <name>changePass</name>
         <uri>changePass</uri>
     </function>
+    <function>
+        <name>social</name>
+        <uri>social</uri>
+    </function>
+    <function>
+        <name>return_user_token</name>
+        <uri>return_user_token</uri>
+    </function>
 </functions>

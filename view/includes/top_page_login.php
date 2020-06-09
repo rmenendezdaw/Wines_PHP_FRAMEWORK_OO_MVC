@@ -11,6 +11,7 @@
   	<link href="<?php echo VENDOR_PATH ?>bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 	<link href="<?php echo CSS_PATH ?>full-width-pics.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="<?php echo JS_PATH ?>api_keys/api_key.js"></script> 
 	<script type="text/javascript"  src="<?php echo LANG_PATH ?>translate.js"></script>
   	<script type="text/javascript" src="<?php echo JS_PATH ?>main.js"></script> 
 		<!-- Custom styles for this template -->
@@ -24,7 +25,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.js"></script>
 
 
-
+		<script src="https://cdn.auth0.com/js/auth0/9.2.2/auth0.min.js"></script>
 		<script type="text/javascript" src="<?php echo JS_VIEW_LOGIN ?>login_list.js"></script>
 
 		<!-- <script src="view/js/utils.js"></script>
