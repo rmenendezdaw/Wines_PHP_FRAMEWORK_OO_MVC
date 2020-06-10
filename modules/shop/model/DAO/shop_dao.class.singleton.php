@@ -41,5 +41,22 @@ class shop_dao {
         $sql="UPDATE wines SET more_visited=more_visited+1 WHERE code='$code'";
         $stmt = $db->execute($sql);
     }
-    
+    public function look_like($db, $username, $code) {        
+        $sql="select * from favorites where username='$username' and code='$code' ";
+        $stmt = $db->execute($sql);
+        return $db->list($stmt);
+    }
+    public function insert_like($db, $username, $code) {        
+        $sql="insert into favorites values ('$username','$code')";
+        $stmt = $db->execute($sql);
+    }
+    public function delete_like($db, $username, $code) {        
+        $sql="delete from favorites where (username='$username')and(code='$code')";
+        $stmt = $db->execute($sql);
+    }
+    public function select_like($db, $username) {        
+        $sql="select * from favorites where username='$username'";
+        $stmt = $db->execute($sql);
+        return $db->list($stmt);
+    }
 }

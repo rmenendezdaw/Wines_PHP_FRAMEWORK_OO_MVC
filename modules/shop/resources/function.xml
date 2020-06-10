@@ -24,4 +24,12 @@
         <name>pagination_shop</name>
         <uri>pagination_shop</uri>
     </function>
+    <function>
+        <name>look_favorites</name>
+        <uri>look_favorites</uri>
+    </function>
+    <function>
+        <name>save_favorites</name>
+        <uri>save_favorites</uri>
+    </function>
 </functions>

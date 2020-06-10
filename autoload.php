@@ -1,6 +1,7 @@
 <?php
 spl_autoload_register(null, false);
 spl_autoload_extensions('.php,.inc.php,.class.php,.class.singleton.php');
+require_once "utils/utils_jwt.inc.php";
 
 spl_autoload_register('loadClasses');
 function loadClasses($className) {

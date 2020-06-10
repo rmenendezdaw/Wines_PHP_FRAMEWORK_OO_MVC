@@ -52,5 +52,11 @@ define('MODEL_LOGIN', SITE_ROOT . 'modules/login/model/model/');
 define('MODEL_PATH_LOGIN', SITE_ROOT . 'modules/login/model/');
 define('DAO_LOGIN', SITE_ROOT . 'modules/login/model/DAO/');
 define('BLL_LOGIN', SITE_ROOT . 'modules/login/model/BLL/');
+//MODULE FAVORITES
+define('JS_VIEW_FAVORITES', SITE_PATH . 'modules/favorites/view/js/');
+define('MODEL_FAVORITES', SITE_ROOT . 'modules/favorites/model/model/');
+define('MODEL_PATH_FAVORITES', SITE_ROOT . 'modules/favorites/model/');
+define('DAO_FAVORITES', SITE_ROOT . 'modules/favorites/model/DAO/');
+define('BLL_FAVORITES', SITE_ROOT . 'modules/favorites/model/BLL/');
 //AMIGABLES
 define('URL_AMIGABLES', TRUE);

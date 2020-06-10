@@ -13,7 +13,9 @@
 	<link href="<?php echo CSS_PATH ?>full-width-pics.css" rel="stylesheet" type="text/css">
 	<script type="text/javascript" src="<?php echo JS_PATH ?>api_keys/api_key.js"></script> 
 	<script type="text/javascript"  src="<?php echo LANG_PATH ?>translate.js"></script>
-  	<script type="text/javascript" src="<?php echo JS_PATH ?>main.js"></script> 
+	  <script type="text/javascript" src="<?php echo JS_PATH ?>main.js"></script> 
+	  <script type="text/javascript" src="<?php echo JS_PATH ?>utils.js"></script> 
+  		<script type="text/javascript" src="<?php echo JS_PATH ?>menu.js"></script> 
 		<!-- Custom styles for this template -->
 		<!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"> -->
 		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">

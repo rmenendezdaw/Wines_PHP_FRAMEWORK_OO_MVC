@@ -37,7 +37,13 @@ class controller_shop {
         $json = loadModel(MODEL_SHOP, "shop_model", "pagination_list_model", $_GET['param']);
         echo json_encode($json);
     }
-
-    
+    function look_favorites() {
+        $json = loadModel(MODEL_SHOP, "shop_model", "look_like_model", $_POST);
+        echo json_encode($json);
+    }
+    function save_favorites() {
+        $json = loadModel(MODEL_SHOP, "shop_model", "save_favorites_model", $_POST);
+        echo json_encode($json);
+    }
     
 }

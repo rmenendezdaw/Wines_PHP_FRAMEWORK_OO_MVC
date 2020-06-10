@@ -174,7 +174,7 @@ function validate_login(){
                         window.location="index.php?page=controller_cart&op=list";
                         localStorage.removeItem('purchase');
                     }else{
-                        window.location="index.php?page=controller_home&op=list";
+                        window.location.href=amigable("?module=home&function=home_list");
                     }
                 })
                 

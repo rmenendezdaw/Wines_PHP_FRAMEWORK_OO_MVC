@@ -4,12 +4,12 @@ function look_fav(){
         const changeButton=$(this);
         var id = $(this).parent().attr("id");
         console.log(id);
-        data={id:id};
+        data={id:id, jwt: localStorage.getItem('JWT')};
 
         $.ajax({
             type:"POST",
             dataType:"JSON",
-            url: "module/favorites/controller/controller_favorites.php?op=look_fav",
+            url: amigable("?module=shop&function=look_favorites"),
             data: data
         })
         .done(function(data){
@@ -22,26 +22,32 @@ function look_fav(){
                 }
         })
         .fail(function(){
-            window.location.href="index.php?page=controller_login&op=login"
+            window.location.href=amigable("?module=login&function=login_list")
             console.log("Error of ajax");
         })
     })
 }
 
 function show_fav(){
+    data={jwt: localStorage.getItem('JWT')};
     $.ajax({
         type:"POST",
         dataType:"JSON",
-        url: "module/favorites/controller/controller_favorites.php?op=select_fav",
+        url: amigable("?module=shop&function=save_favorites"),
+        data: data
     })
     .done(function(data){
         for (row in data){
-            console.log(data[row]);
+            // console.log(data[row]);
             $('#'+data[row].code).find('.btn-fav').addClass('btn-fav-active');
         }
+    })
+    .fail(function(error){
+        console.log(error);
     })
 }
 
 $(document).ready(function(){
     look_fav();
+    show_fav();
 })

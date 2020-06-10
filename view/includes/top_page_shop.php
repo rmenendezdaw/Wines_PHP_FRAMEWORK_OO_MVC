@@ -26,8 +26,11 @@
  		<script type="text/javascript" src="<?php echo JS_PATH ?>main.js"></script> 
   		<script type="text/javascript" src="<?php echo JS_PATH ?>api_keys/api_key.js"></script> 
 		<script type="text/javascript" src="<?php echo INI_PATH_API ?>api_key.ini"></script>
-
+		<script type="text/javascript" src="<?php echo JS_PATH ?>utils.js"></script> 
+  		<script type="text/javascript" src="<?php echo JS_PATH ?>menu.js"></script> 
 		<script type="text/javascript" src="<?php echo JS_VIEW_SHOP ?>shop_list.js"></script>
+		<script type="text/javascript" src="<?php echo JS_VIEW_SHOP ?>controller_favorites.js"></script>
+
 
 		<!-- <script src="module/search/model/search.js"></script> -->
 		<!-- Bootpag -->

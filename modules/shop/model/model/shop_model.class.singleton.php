@@ -37,5 +37,10 @@ class shop_model {
     public function pagination_list_model($arrArgument){
         return $this->bll->obtain_pagination_BLL($arrArgument);
     }
-    
+    public function look_like_model($arrArgument){
+        return $this->bll->look_like_model_BLL($arrArgument);
+    }
+    public function save_favorites_model($arrArgument){
+        return $this->bll->save_favorites_model_BLL($arrArgument);
+    }
 }

@@ -6,7 +6,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav ml-auto" id="ulMenu">
           
           <li class="nav-item active">
             <a class="nav-link" href="<?php amigable('?module=home&function=home_list'); ?>" data-tr="">Home
@@ -16,9 +16,9 @@
           <li class="nav-item">
             <a class="nav-link" href="<?php amigable('?module=shop&function=shop_list'); ?>" data-tr="">Shop</a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
           <a class="nav-link" href="<?php amigable('?module=login&function=login_list'); ?>" data-tr="">Log in</a>
-          </li>
+          </li> -->
           <!-- <li class="nav-item">
             <a class="nav-link" href="<?php amigable('?module=cart&function=cart'); ?>" data-tr="Cart"></a>
           </li>  -->

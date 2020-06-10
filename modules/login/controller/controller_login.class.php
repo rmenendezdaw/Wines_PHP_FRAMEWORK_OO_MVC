@@ -34,7 +34,6 @@ class controller_login {
             'inputMessage' => $_POST['message']
         );
         if($insert!=false){
-
             send_email($arrArgument);
             echo json_encode("success");
         }
@@ -85,7 +84,6 @@ class controller_login {
     }
     function social() {
         echo loadModel(MODEL_LOGIN, "login_model", "social_model", $_POST);
-        
     }
     function return_user_token(){
         echo loadModel(MODEL_LOGIN, "login_model", "return_token_model", $_POST['jwt']);
